@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="font-bold text-3xl">
       Harsh Raghav is a software developer.
-      <Button>Hello harsh</Button>
+      <Link href={"/sign-in"}>
+        <Button>Sign-in</Button>
+      </Link>
     </div>
   );
 }
