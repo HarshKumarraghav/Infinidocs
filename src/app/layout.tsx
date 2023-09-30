@@ -19,6 +19,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <link rel="icon" href="/logo/logo.png" />
+        </head>
         <body className={inter.className}>
           <Navbar />
           <ThemeProviders>
