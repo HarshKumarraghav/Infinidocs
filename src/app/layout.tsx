@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import ThemeProviders from "@/Providers/ThemeProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar/Navbar";
+import Providers from "./Provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,12 +23,14 @@ export default function RootLayout({
         <head>
           <link rel="icon" href="/logo/logo.png" />
         </head>
-        <body className={inter.className}>
-          <Navbar />
-          <ThemeProviders>
-            <main>{children}</main>
-          </ThemeProviders>
-        </body>
+        <Providers>
+          <body className={inter.className}>
+            <Navbar />
+            <ThemeProviders>
+              <main>{children}</main>
+            </ThemeProviders>
+          </body>
+        </Providers>
       </html>
     </ClerkProvider>
   );
