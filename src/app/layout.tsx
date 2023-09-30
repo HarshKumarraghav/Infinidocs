@@ -5,6 +5,8 @@ import ThemeProviders from "@/Providers/ThemeProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar/Navbar";
 import Providers from "./Provider";
+import "react-loading-skeleton/dist/skeleton.css";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

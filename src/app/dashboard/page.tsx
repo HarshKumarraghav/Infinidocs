@@ -1,3 +1,4 @@
+import Dashboard from "@/components/Dashboard/Dashboard";
 import { db } from "@/db";
 import { auth, clerkClient } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
@@ -13,7 +14,7 @@ async function page() {
     },
   });
   if (!dbUser) redirect("/auth-callback?origin=dashboard");
-  return <div>user:{user?.firstName}</div>;
+  return <Dashboard />;
 }
 
 export default page;

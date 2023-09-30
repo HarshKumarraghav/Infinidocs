@@ -1,5 +1,5 @@
 import { TRPCError } from "@trpc/server";
-import { publicProcedure, router } from "./trpc";
+import { publicProcedure, privateProcedure, router } from "./trpc";
 import { auth, clerkClient } from "@clerk/nextjs";
 import { db } from "@/db";
 
@@ -29,6 +29,15 @@ export const appRouter = router({
       });
     }
     return { success: true };
+  }),
+  getUserFiles: privateProcedure.query(async ({ ctx }) => {
+    const { userId } = ctx;
+
+    return await db.file.findMany({
+      where: {
+        userId: userId,
+      },
+    });
   }),
 });
 export type AppRouter = typeof appRouter;

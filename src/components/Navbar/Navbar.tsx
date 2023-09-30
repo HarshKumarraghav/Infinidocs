@@ -1,5 +1,5 @@
 import Link from "next/link";
-import MaxWidthWrapper from "../MaxWidthWrapper";
+import MaxWidthWrapper from "../Container/MaxWidthWrapper";
 import { ArrowRight } from "lucide-react";
 import { UserButton, auth } from "@clerk/nextjs";
 // import UserAccountNav from "./UserAccountNav";
