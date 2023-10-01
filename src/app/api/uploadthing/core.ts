@@ -1,29 +1,41 @@
+import { db } from "@/db";
+import { auth, clerkClient } from "@clerk/nextjs";
+import { TRPCError } from "@trpc/server";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 
 const f = createUploadthing();
 
-const auth = (req: Request) => ({ id: "fakeId" }); // Fake auth function
-
 // FileRouter for your app, can contain multiple FileRoutes
 export const ourFileRouter = {
   // Define as many FileRoutes as you like, each with a unique routeSlug
-  imageUploader: f({ image: { maxFileSize: "4MB" } })
+  pdfUploader: f({ pdf: { maxFileSize: "4MB" } })
     // Set permissions and file types for this FileRoute
     .middleware(async ({ req }) => {
-      // This code runs on your server before upload
-      const user = await auth(req);
+      // Check if user is logged in
+      const { userId } = auth();
+      const user = await clerkClient.users.getUser(userId || "");
 
-      // If you throw, the user will not be able to upload
-      if (!user) throw new Error("Unauthorized");
+      if (!user.id || !user.emailAddresses[0].emailAddress) {
+        throw new TRPCError({
+          code: "UNAUTHORIZED",
+          message: "Unauthorized",
+        });
+      }
 
-      // Whatever is returned here is accessible in onUploadComplete as `metadata`
-      return { userId: user.id };
+      return {
+        UserId: user.id,
+      };
     })
     .onUploadComplete(async ({ metadata, file }) => {
-      // This code RUNS ON YOUR SERVER after upload
-      console.log("Upload complete for userId:", metadata.userId);
-
-      console.log("file url", file.url);
+      await db.file.create({
+        data: {
+          key: file.key,
+          name: file.name,
+          userId: metadata.UserId,
+          url: `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`,
+          uploadStatus: "PROCESSING",
+        },
+      });
     }),
 } satisfies FileRouter;
 

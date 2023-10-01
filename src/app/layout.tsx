@@ -7,6 +7,7 @@ import Providers from "./Provider";
 import "react-loading-skeleton/dist/skeleton.css";
 import { TopLoaderOptions } from "@/utils/Constant";
 import NextTopLoader from "nextjs-toploader";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "infinidocs.ai",
@@ -28,6 +29,7 @@ export default function RootLayout({
           <NextTopLoader {...TopLoaderOptions} />
           <Providers>
             <ThemeProviders>
+              <Toaster />
               <Navbar />
               <main>{children}</main>
             </ThemeProviders>
