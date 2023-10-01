@@ -1,13 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import ThemeProviders from "@/Providers/ThemeProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar/Navbar";
 import Providers from "./Provider";
 import "react-loading-skeleton/dist/skeleton.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { TopLoaderOptions } from "@/utils/Constant";
+import NextTopLoader from "nextjs-toploader";
 
 export const metadata: Metadata = {
   title: "infinidocs.ai",
@@ -26,6 +25,7 @@ export default function RootLayout({
           <link rel="icon" href="/logo/logo.png" />
         </head>
         <body suppressHydrationWarning={true}>
+          <NextTopLoader {...TopLoaderOptions} />
           <Providers>
             <ThemeProviders>
               <Navbar />
