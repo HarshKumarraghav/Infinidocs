@@ -4,7 +4,11 @@ import ThemeProviders from "@/Providers/ThemeProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar/Navbar";
 import Providers from "./Provider";
+
+// SimpleBar CSS and PDFJS CSS
 import "react-loading-skeleton/dist/skeleton.css";
+import "simplebar-react/dist/simplebar.min.css";
+
 import { TopLoaderOptions } from "@/utils/Constant";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "@/components/ui/toaster";
