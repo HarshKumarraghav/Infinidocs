@@ -1,16 +1,20 @@
+"use client";
 import Link from "next/link";
 import MaxWidthWrapper from "../Container/MaxWidthWrapper";
 import { ArrowRight } from "lucide-react";
-import { UserButton, auth } from "@clerk/nextjs";
+import { UserButton, useAuth } from "@clerk/nextjs";
 // import UserAccountNav from "./UserAccountNav";
 // import MobileNav from "./MobileNav";
 import { buttonVariants } from "../ui/button";
 import MobileNav from "./MobileNav";
+import ThemeSwitcher from "../Theme/ThemeSwitcher";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const { userId } = auth();
+  const { userId } = useAuth();
   const isAuth = !!userId;
-
+  const pathname = usePathname();
+  console.log("pathname", pathname);
   return (
     <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b  backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
@@ -22,6 +26,7 @@ const Navbar = () => {
           <MobileNav isAuth={!!isAuth} />
 
           <div className="hidden items-center space-x-4 sm:flex">
+            <ThemeSwitcher />
             {!isAuth ? (
               <>
                 <Link
@@ -53,25 +58,19 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <Link
-                  href="/dashboard"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    size: "sm",
-                  })}
-                >
-                  Dashboard
-                </Link>
-
-                {/* <UserAccountNav
-                  name={
-                    !isAuth.given_name || !isAuth.family_name
-                      ? "Your Account"
-                      : `${user.given_name} ${user.family_name}`
-                  }
-                  email={user.email ?? ""}
-                  imageUrl={user.picture ?? ""}
-                /> */}
+                {pathname === "/" ? (
+                  <Link
+                    href="/dashboard"
+                    className={buttonVariants({
+                      variant: "default",
+                      size: "sm",
+                    })}
+                  >
+                    Dashboard
+                  </Link>
+                ) : (
+                  <UserButton afterSignOutUrl="/" />
+                )}
               </>
             )}
           </div>

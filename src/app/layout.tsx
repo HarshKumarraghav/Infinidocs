@@ -25,14 +25,14 @@ export default function RootLayout({
         <head>
           <link rel="icon" href="/logo/logo.png" />
         </head>
-        <Providers>
-          <body className={inter.className}>
-            <Navbar />
+        <body suppressHydrationWarning={true}>
+          <Providers>
             <ThemeProviders>
+              <Navbar />
               <main>{children}</main>
             </ThemeProviders>
-          </body>
-        </Providers>
+          </Providers>
+        </body>
       </html>
     </ClerkProvider>
   );

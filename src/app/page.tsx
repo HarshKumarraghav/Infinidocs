@@ -10,11 +10,13 @@ export default async function Home() {
     <>
       <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center">
         <Badge className="mx-auto mb-4 flex max-w-fit items-center  justify-center space-x-2 overflow-hidden rounded-full border  px-7 py-2 shadow-md backdrop-blur transition-all">
-          <p className="text-sm font-semibold">infinidocs. is now public!</p>
+          <p className="text-sm font-semibold text-white">
+            infinidocs. is now live! 🚀
+          </p>
         </Badge>
         <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
           Chat with your <span className="text-primary">documents</span> in
-          seconds.
+          seconds
         </h1>
         <p className="mt-5 max-w-prose text-zinc-500 sm:text-lg">
           infinidocs offers a seamless way to engage in interactive discussions

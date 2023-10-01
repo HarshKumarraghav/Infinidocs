@@ -12,8 +12,6 @@ import {
 const ThemeSwitcher = () => {
   const { setTheme } = useTheme();
 
-  const AudioSrc = "/Audio/light-switch.mp3";
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
