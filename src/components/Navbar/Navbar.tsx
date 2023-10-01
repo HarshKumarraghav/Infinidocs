@@ -14,7 +14,6 @@ const Navbar = () => {
   const { userId } = useAuth();
   const isAuth = !!userId;
   const pathname = usePathname();
-  console.log("pathname", pathname);
   return (
     <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b  backdrop-blur-lg transition-all">
       <MaxWidthWrapper>

@@ -9,7 +9,7 @@ export default authMiddleware({
     "/auth-callback",
     "/api/trpc/[trpc]",
     "/api/uploadthing",
-    "/api/auth/login",
+    "/api/message",
   ],
 });
 
