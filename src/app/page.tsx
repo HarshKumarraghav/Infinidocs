@@ -132,8 +132,8 @@ export default async function Home() {
                 Start asking questions
               </span>
               <span className="mt-2 text-zinc-500">
-                It&apos;s that simple. Try out Quill today - it really takes
-                less than a minute.
+                It&apos;s that simple. Try out Infinidocs today - it really
+                takes less than a minute.
               </span>
             </div>
           </li>

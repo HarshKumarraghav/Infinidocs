@@ -10,6 +10,7 @@ export default authMiddleware({
     "/api/trpc/[trpc]",
     "/api/uploadthing",
     "/api/message",
+    "/api/webhook",
     "/api/webhook/stripe",
   ],
 });

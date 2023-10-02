@@ -44,7 +44,7 @@ export function constructMetadata({
       creator: "@_Harsh_raghav_",
     },
     icons,
-    metadataBase: new URL("https://infinidocs.vercel.app"),
+    metadataBase: new URL("https://infinidocs.harshraghav.tech"),
     themeColor: "#FFF",
     ...(noIndex && {
       robots: {

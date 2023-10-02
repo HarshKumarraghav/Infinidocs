@@ -1,7 +1,7 @@
 import { db } from "@/db";
 import { stripe } from "@/lib/stripe";
 import { headers } from "next/headers";
-import type Stripe from "stripe";
+import Stripe from "stripe";
 
 export async function POST(request: Request) {
   const body = await request.text();
