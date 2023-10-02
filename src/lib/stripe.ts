@@ -11,9 +11,8 @@ export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
 
 export async function getUserSubscriptionPlan() {
   const { userId } = auth();
-  const user = await clerkClient.users.getUser(userId || "");
 
-  if (!user.id) {
+  if (!userId) {
     return {
       ...PLANS[0],
       isSubscribed: false,
@@ -24,7 +23,7 @@ export async function getUserSubscriptionPlan() {
 
   const dbUser = await db.user.findFirst({
     where: {
-      id: user.id,
+      id: userId,
     },
   });
 

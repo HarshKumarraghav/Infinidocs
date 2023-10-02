@@ -55,7 +55,7 @@ const Navbar = async () => {
                   </Link>
                 ) : (
                   <Link
-                    href="/billing"
+                    href="/dashboard/billing"
                     className={buttonVariants({
                       variant: "ghost",
                       size: "sm",

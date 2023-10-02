@@ -35,19 +35,22 @@ export const ChatProvider = ({ fileId, children }: Props) => {
 
   const { mutate: sendMessage } = useMutation({
     mutationFn: async ({ message }: { message: string }) => {
-      const response = await fetch("/api/message", {
-        method: "POST",
-        body: JSON.stringify({
-          fileId,
-          message,
-        }),
-      });
+      try {
+        const response = await fetch("/api/message", {
+          method: "POST",
+          body: JSON.stringify({
+            fileId,
+            message,
+          }),
+        });
 
-      if (!response.ok) {
-        throw new Error("Failed to send message");
+        if (!response.ok) {
+          throw new Error("Failed to send message");
+        }
+        return response.body;
+      } catch (error) {
+        console.error(error);
       }
-
-      return response.body;
     },
     onMutate: async ({ message }) => {
       backupMessage.current = message;
