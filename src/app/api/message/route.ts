@@ -6,9 +6,9 @@ import { auth, clerkClient } from "@clerk/nextjs";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { PineconeStore } from "langchain/vectorstores/pinecone";
 
-import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { OpenAIStream, StreamingTextResponse } from "ai";
-export const POST = async (req: NextResponse) => {
+export const POST = async (req: NextRequest) => {
   const body = await req.json();
   const { userId } = auth();
   const user = await clerkClient.users.getUser(userId || "");
