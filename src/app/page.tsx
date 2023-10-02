@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
+import ImageSwitcher from "@/components/Theme/ImageSwitcher";
 export default async function Home() {
   return (
     <>
@@ -54,13 +55,11 @@ export default async function Home() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="mt-16 flow-root sm:mt-24">
               <Card className="bg-primary-foreground -m-2 rounded-xl lg:-m-4 lg:rounded-2xl lg:p-16 p-4 md:p-8">
-                <Image
-                  src="/dashboard-preview.png"
-                  alt="product preview"
+                <ImageSwitcher
+                  url="/preview-app"
                   width={1364}
                   height={866}
                   quality={100}
-                  className="rounded-md shadow-2xl"
                 />
               </Card>
             </div>
@@ -89,7 +88,8 @@ export default async function Home() {
               Start chatting in minutes
             </h2>
             <p className="mt-4 text-lg text-zinc-500">
-              Chatting to your PDF files has never been easier than with Quill.
+              Chatting to your PDF files has never been easier than with
+              Infinidocs.
             </p>
           </div>
         </div>
@@ -156,13 +156,11 @@ export default async function Home() {
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="mt-16 flow-root sm:mt-24">
             <Card className="bg-primary-foreground -m-2 rounded-xl lg:-m-4 lg:rounded-2xl lg:p-16 p-4 md:p-8">
-              <Image
-                src="/dashboard-preview.png"
-                alt="uploading preview"
+              <ImageSwitcher
+                url="/preview-upload"
                 width={1419}
                 height={732}
                 quality={100}
-                className="rounded-md shadow-2xl"
               />
             </Card>
           </div>

@@ -14,7 +14,7 @@ export function absoluteUrl(path: string) {
 export function constructMetadata({
   title = "Infinidocs - The best way to read your PDFs",
   description = "Infinidocs is a document reader that uses AI to help you read your PDFs",
-  image = "/thumbnail.png",
+  image = "/template.png",
   icons = "/logo/logo.png",
   noIndex = false,
 }: {
