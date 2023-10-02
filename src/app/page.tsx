@@ -1,9 +1,8 @@
 import MaxWidthWrapper from "@/components/Container/MaxWidthWrapper";
 import { Badge } from "@/components/ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import ImageSwitcher from "@/components/Theme/ImageSwitcher";
 import Footer from "@/components/Footer/Footer";
@@ -110,7 +109,6 @@ export default async function Home() {
                 >
                   pro plan
                 </Link>
-                .
               </span>
             </div>
           </li>

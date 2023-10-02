@@ -24,7 +24,7 @@ export function constructMetadata({
   icons?: string;
   noIndex?: boolean;
 } = {}): Metadata {
-  return {
+  const metadata: Metadata = {
     title,
     description,
     openGraph: {
@@ -43,14 +43,19 @@ export function constructMetadata({
       images: [image],
       creator: "@_Harsh_raghav_",
     },
+
     icons,
     metadataBase: new URL("https://infinidocs.harshraghav.tech"),
     themeColor: "#FFF",
-    ...(noIndex && {
-      robots: {
-        index: true,
-        follow: true,
-      },
-    }),
   };
+
+  // Add robots meta tag if noIndex is true
+  if (noIndex) {
+    metadata.robots = {
+      index: true,
+      follow: true,
+    };
+  }
+
+  return metadata;
 }
