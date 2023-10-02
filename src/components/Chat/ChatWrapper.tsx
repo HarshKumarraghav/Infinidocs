@@ -90,7 +90,7 @@ const ChatWrapper = ({ fileId }: ChatWrapperProps) => {
     <ChatProvider fileId={fileId}>
       <div className="relative min-h-full bg-primary-foreground flex divide-y  flex-col justify-between gap-2">
         <div className="flex-1 justify-between flex flex-col mb-28">
-          <Messages />
+          <Messages fileId={fileId} />
         </div>
 
         <ChatInput />
