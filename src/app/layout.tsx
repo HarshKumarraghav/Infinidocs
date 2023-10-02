@@ -12,10 +12,11 @@ import "simplebar-react/dist/simplebar.min.css";
 import { TopLoaderOptions } from "@/utils/Constant";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
-  title: "infinidocs.ai",
-  description: "infinidocs.ai: Your personal ChatGPT for documents.",
+  title: "Infinidocs",
+  description: "Infinidocs: Your personal ChatGPT for documents.",
 };
 
 export default function RootLayout({
@@ -38,6 +39,7 @@ export default function RootLayout({
               <main>{children}</main>
             </ThemeProviders>
           </Providers>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
