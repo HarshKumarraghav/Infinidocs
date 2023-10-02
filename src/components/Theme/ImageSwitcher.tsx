@@ -11,7 +11,6 @@ interface ImageSwitcherProps {
 }
 const ImageSwitcher = ({ url, width, height, quality }: ImageSwitcherProps) => {
   const { theme, systemTheme } = useTheme();
-  console.log("called");
   return (
     <>
       {systemTheme === "dark" ? (
