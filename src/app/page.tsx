@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import ImageSwitcher from "@/components/Theme/ImageSwitcher";
+import Footer from "@/components/Footer/Footer";
 export default async function Home() {
   return (
     <>
@@ -166,6 +167,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
