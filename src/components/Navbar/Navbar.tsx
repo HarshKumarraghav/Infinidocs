@@ -43,7 +43,7 @@ const Navbar = async () => {
               </>
             ) : (
               <>
-                {subscriptionPlan.isSubscribed ? (
+                {!subscriptionPlan.isSubscribed ? (
                   <Link
                     href="/pricing"
                     className={buttonVariants({
