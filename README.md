@@ -3,10 +3,9 @@
 # [infinidocs.ai](https://infinidocs.harshraghav.tech)
 
 </p>
+
 <p align="center">
-
-<img width="150" alt="poster1" src="https://github.com/HarshKumarraghav/Infinidocs/assets/72187191/df651070-2b7a-412e-949b-7cdba0136742">
-
+<img width="150" alt="poster1" src="https://github.com/HarshKumarraghav/Infinidocs/assets/72187191/60ce461c-4175-4462-80bc-4e3bf0d757c7">
 </p>
 
 **infinidocs.ai** the ultimate destination where human creativity intersects with the power of artificial intelligence. Unleash the full potential of your imagination and bring your ideas to life in ways you've never imagined. With its cutting-edge features,**infinidocs.ai** stands out as a pioneer in the world of AI-powered creativity.
