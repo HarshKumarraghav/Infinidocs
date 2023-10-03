@@ -43,17 +43,7 @@ const Navbar = async () => {
               </>
             ) : (
               <>
-                {!subscriptionPlan.isSubscribed ? (
-                  <Link
-                    href="/pricing"
-                    className={buttonVariants({
-                      variant: "ghost",
-                      size: "sm",
-                    })}
-                  >
-                    Pricing
-                  </Link>
-                ) : (
+                {subscriptionPlan.isSubscribed === true ? (
                   <Link
                     href="/dashboard/billing"
                     className={buttonVariants({
@@ -62,6 +52,16 @@ const Navbar = async () => {
                     })}
                   >
                     Manage Subscription
+                  </Link>
+                ) : (
+                  <Link
+                    href="/pricing"
+                    className={buttonVariants({
+                      variant: "ghost",
+                      size: "sm",
+                    })}
+                  >
+                    Pricing
                   </Link>
                 )}
                 <Link
