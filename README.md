@@ -41,7 +41,7 @@ https://infinidocs.harshraghav.tech
 
 # Video Demo:
 
-https://github.com/HarshKumarraghav/infinidocs.ai/assets/72187191/ae1ebb65-6b3a-40b0-9c03-849142acec92
+https://github.com/HarshKumarraghav/Infinidocs/assets/72187191/51478045-a5ca-4372-bbf3-8d82d261b1a2
 
 ## 💻 Development
 
