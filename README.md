@@ -5,7 +5,7 @@
 </p>
 <p align="center">
 
-<img width="150" alt="poster1" src="https://github.com/HarshKumarraghav/infinidocs.ai/assets/72187191/dc2c05d0-e0a6-4f36-8017-f73a312223b2">
+<img width="150" alt="poster1" src="https://github.com/HarshKumarraghav/Infinidocs/assets/72187191/df651070-2b7a-412e-949b-7cdba0136742">
 
 </p>
 
