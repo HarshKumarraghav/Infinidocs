@@ -1,6 +1,6 @@
 <p align="center">
 
-# [infinidocs.ai](https://infinidocs.harshraghav.tech)
+# [Infinidocs](https://infinidocs.harshraghav.tech)
 
 </p>
 
@@ -8,9 +8,11 @@
 <img width="150" alt="poster1" src="https://github.com/HarshKumarraghav/Infinidocs/assets/72187191/60ce461c-4175-4462-80bc-4e3bf0d757c7">
 </p>
 
-**infinidocs.ai** the ultimate destination where human creativity intersects with the power of artificial intelligence. Unleash the full potential of your imagination and bring your ideas to life in ways you've never imagined. With its cutting-edge features,**infinidocs.ai** stands out as a pioneer in the world of AI-powered creativity.
+**Infinidocs** InfiniDocs is your ultimate document companion, revolutionizing the way you interact with and manage your documents. Imagine having a seamless conversation with an intelligent AI, akin to chatting with a knowledgeable friend, who effortlessly assists you with all your document-related needs. InfiniDocs is designed to simplify document creation, editing, organization, and retrieval, making your work more efficient and enjoyable.
 
-Engage in captivating conversations with our advanced AI chatbot, which not only responds intelligently but learns from you, adapting its interactions to your unique style. Need to generate code? Let our cutting-edge AI algorithms instantly craft code snippets, revolutionizing your development process.
+# Why InfiniDocs?
+
+With InfiniDocs by your side, document management becomes effortless, collaboration is a breeze, and your productivity soars. Say goodbye to the hassles of traditional document handling and embrace the future of intelligent document assistance. Join us on the journey to a more efficient, organized, and enjoyable document experience with InfiniDocs.
 
 <p align="center">
 <img src="https://img.shields.io/badge/Author-@HarshKumarraghav-critical" />
@@ -21,19 +23,25 @@ Engage in captivating conversations with our advanced AI chatbot, which not only
 
 </div>
 
-# Visit infinidocs.ai:
+# Visit Infinidocs:
 
 https://infinidocs.harshraghav.tech
 
-## 🛠️ Tech Stack Used in infinidocs.ai:
+## 🛠️ Tech Stack Used in Infinidocs:
 
 - **NextJS 13:** A popular JavaScript library for building user interfaces, providing a fast and responsive application.
+
 - **TailwindCSS:** A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.
 - **Clerk:** An easy to use, extensible authentication library for Next.js.
+
 - **SchadCn UI:** A set of accessible, reusable, and composable React components for building websites and applications.
+
 - **NeonDB:** A simple, lightweight, and fast database that is built for the modern web.
+
 - **Vercel:** A cloud platform for static sites and Serverless Functions that fits perfectly with your workflow. It enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with no configuration.
+
 - **OpenAI API:** The OpenAI API provides a general-purpose "text in, text out" interface, allowing users to try it on virtually any English language task. You can test it out in the playground below, or read more about it in the documentation.
+
 - **Pinecone:** Pinecone is a vector database that makes it easy to search, analyze, and build intelligent applications using vector similarity search. Pinecone is a fully managed service that can be used as a cloud service or deployed on-premises.
 
 ---
@@ -47,7 +55,7 @@ https://github.com/HarshKumarraghav/Infinidocs/assets/72187191/51478045-a5ca-437
 ### Install Repository
 
 ```git
-git clone hhttps://github.com/HarshKumarraghav/infinidocs.ai.git
+git clone hhttps://github.com/HarshKumarraghav/Infinidocs.git
 ```
 
 ### Run Project

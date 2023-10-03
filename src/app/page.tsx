@@ -16,13 +16,12 @@ export default async function Home() {
           </p>
         </Badge>
         <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
-          Chat with your <span className="text-primary">documents</span> in
-          seconds
+          Elevate Your <span className="text-primary">documents</span> Elevate
+          Your Productivity.
         </h1>
-        <p className="mt-5 max-w-prose text-zinc-500 sm:text-lg">
-          infinidocs offers a seamless way to engage in interactive discussions
-          with any PDF document. Begin by uploading your file and immediately
-          commence querying for information.
+        <p className="mt-5 max-w-prose dark:text-gray-400 text-gray-600  sm:text-lg">
+          Infinidocs is a platform that allows you to chat with your documents.
+          <br /> It&apos;s that simple.
         </p>
 
         <Link
@@ -87,7 +86,7 @@ export default async function Home() {
             <h2 className="mt-2 font-bold text-4xl ">
               Start chatting in minutes
             </h2>
-            <p className="mt-4 text-lg text-zinc-500">
+            <p className="mt-4 text-lg dark:text-gray-400 text-gray-600">
               Chatting to your PDF files has never been easier than with
               Infinidocs.
             </p>
@@ -101,7 +100,7 @@ export default async function Home() {
               <span className="text-xl font-semibold">
                 Sign up for an account
               </span>
-              <span className="mt-2 text-zinc-500">
+              <span className="mt-2 dark:text-gray-400 text-gray-600">
                 Either starting out with a free plan or choose our{" "}
                 <Link
                   href="/pricing"
@@ -119,7 +118,7 @@ export default async function Home() {
               <span className="text-xl font-semibold">
                 Upload your PDF file
               </span>
-              <span className="mt-2 text-zinc-500">
+              <span className="mt-2 dark:text-gray-400 text-gray-600">
                 We&apos;ll process your file and make it ready for you to chat
                 with.
               </span>
@@ -131,7 +130,7 @@ export default async function Home() {
               <span className="text-xl font-semibold">
                 Start asking questions
               </span>
-              <span className="mt-2 text-zinc-500">
+              <span className="mt-2 dark:text-gray-400 text-gray-600">
                 It&apos;s that simple. Try out Infinidocs today - it really
                 takes less than a minute.
               </span>
