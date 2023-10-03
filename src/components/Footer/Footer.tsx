@@ -12,11 +12,11 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-primary/10 mt-10 px-4 md:px-0">
+      <footer className="bg-primary/5 mt-10 px-4 md:px-0">
         <div className=" px-8 py-8 md:py-12">
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div className="w-full md:w-1/3">
-              <h1 className="text-2xl  flex gap-x-2   mb-2  font-main font-bold items-center cursor-pointer">
+              <h1 className="text-2xl  flex gap-x-2   mb-2  font-main font-semi-bold items-center cursor-pointer">
                 <Image
                   src="/logo/logo.png"
                   width={40}
@@ -26,26 +26,23 @@ const Footer = () => {
                 />
                 Infinidocs
               </h1>
-              <p className="text-sm md:text-base leading-relaxed">
-                Infinidocs: The ultimate destination where human creativity
-                intersects with the power of artificial intelligence. Unleash
-                the full potential of your imagination and bring your ideas to
-                life in ways you&apos;ve never imagined.
+              <p className="text-sm leading-relaxed">
+                Elevate Your Documents, Elevate Your Productivity.
               </p>
             </div>
             <div className="w-full md:w-1/3">
               <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
               <ul className="text-sm md:text-base leading-relaxed">
-                <li className="flex items-center mb-2">
-                  <Phone className="mr-2 " />
+                <li className="flex items-center mb-2  text-sm">
+                  <Phone className="mr-2  text-sm" />
                   +91 7078218794
                 </li>
-                <li className="flex items-center mb-2">
-                  <Mail className="mr-2 " />
+                <li className="flex items-center mb-2  text-sm">
+                  <Mail className="mr-2  text-sm" />
                   raghavharsh068@gmail.com
                 </li>
-                <li className="flex items-center">
-                  <LocateFixedIcon className="mr-2 " />
+                <li className="flex items-center  text-sm">
+                  <LocateFixedIcon className="mr-2  text-sm" />
                   Gautam Buddha Nagar, Uttar Pradesh, India
                 </li>
               </ul>
@@ -79,7 +76,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="w-full h-10 flex justify-center items-center bg-primary/20 shadow-light-shadow text-center">
+      <div className="w-full h-10 flex justify-center items-center bg-primary/10 shadow-light-shadow text-center">
         <p className="text-sm ">
           &copy; 2023 Infinidocs. All Rights Reserved by Infinidocs Software Pvt
           Ltd

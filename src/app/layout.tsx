@@ -39,7 +39,8 @@ export default function RootLayout({
           dividerText: "dark:text-white text-gray-500",
           formFieldLabel: "dark:text-white text-gray-500",
           footerActionText: "dark:text-white text-gray-500",
-          formFieldInput: "dark:bg-slate-800 bg-slate-100",
+          formFieldInput:
+            "dark:bg-slate-800 bg-slate-100 dark:text-white text-gray-700",
           formFieldInputShowPasswordIcon: "dark:text-white text-gray-500",
         },
       }}

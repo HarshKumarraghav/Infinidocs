@@ -30,7 +30,7 @@ With InfiniDocs by your side, document management becomes effortless, collaborat
 - Free & Pro Plan Using Stripe
 - A Beautiful And Highly Functional PDF Viewer
 - Streaming API Responses in Real-Time
-- Authentication Using Kinde
+- Authentication Using clerk
 - Clean, Modern UI Using 'shadcn-ui'
 - Optimistic UI Updates for a Great UX
 - Infinite Message Loading for Performance
