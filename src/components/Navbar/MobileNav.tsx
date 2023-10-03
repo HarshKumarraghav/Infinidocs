@@ -42,7 +42,15 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </li>
-                <li className="my-3 h-px w-full bg-gray-300" />
+                <li>
+                  <Link
+                    onClick={() => closeOnCurrent("/sign-up")}
+                    className="flex items-center w-full font-semibold"
+                    href="/sign-up"
+                  >
+                    Sign up
+                  </Link>
+                </li>
                 <li>
                   <Link
                     onClick={() => closeOnCurrent("/sign-in")}
@@ -52,7 +60,6 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     Sign in
                   </Link>
                 </li>
-                <li className="my-3 h-px w-full bg-gray-300" />
               </>
             ) : (
               <>
@@ -85,10 +92,9 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     Pricing
                   </Link>
                 </li>
-
-                <ThemeSwitcher />
               </>
             )}
+            <ThemeSwitcher />
           </ul>
         </div>
       ) : null}
