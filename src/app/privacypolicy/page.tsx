@@ -40,10 +40,10 @@ const page = () => {
       <h2 className="text-xl font-bold mt-4">Cookies:</h2>
       <p>
         We use cookies to enhance your experience on our site. Cookies are small
-        files that a site or its service provider transfers to your computer's
-        hard drive through your web browser (if you allow) that enables the
-        site's or service provider's systems to recognize your browser and
-        capture and remember certain information.
+        files that a site or its service provider transfers to your
+        computer&apos;s hard drive through your web browser (if you allow) that
+        enables the site&apos;s or service provider&apos;s systems to recognize
+        your browser and capture and remember certain information.
       </p>
 
       <h2 className="text-xl font-bold mt-4">Third-Party Disclosure:</h2>
