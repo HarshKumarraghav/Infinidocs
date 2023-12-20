@@ -11,7 +11,9 @@ import { PLANS } from "@/config/stripe";
 import { cn } from "@/lib/utils";
 import { auth, clerkClient } from "@clerk/nextjs";
 import { ArrowRight, Check, HelpCircle, Minus } from "lucide-react";
+
 import Link from "next/link";
+
 import React from "react";
 
 const page = async () => {
