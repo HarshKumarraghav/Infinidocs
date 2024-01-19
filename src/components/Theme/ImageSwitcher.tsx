@@ -1,8 +1,9 @@
 "use client";
-import { th } from "date-fns/locale";
+import React from "react";
+
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import React from "react";
+
 interface ImageSwitcherProps {
   url: string;
   width: number;
@@ -11,7 +12,6 @@ interface ImageSwitcherProps {
 }
 const ImageSwitcher = ({ url, width, height, quality }: ImageSwitcherProps) => {
   const { theme, systemTheme } = useTheme();
-  console.log("called");
   return (
     <>
       {systemTheme === "dark" ? (
