@@ -1,14 +1,13 @@
-import { db } from "@/db";
-import { createUploadthing, type FileRouter } from "uploadthing/next";
-
 import { PDFLoader } from "langchain/document_loaders/fs/pdf";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { PineconeStore } from "langchain/vectorstores/pinecone";
+import { createUploadthing, type FileRouter } from "uploadthing/next";
 
-import { getUserSubscriptionPlan } from "@/lib/stripe";
 import { PLANS } from "@/config/stripe";
-import { auth, clerkClient } from "@clerk/nextjs";
+import { db } from "@/db";
 import { getPineconeClient } from "@/lib/Pinecone";
+import { getUserSubscriptionPlan } from "@/lib/stripe";
+import { auth, clerkClient } from "@clerk/nextjs";
 
 const f = createUploadthing();
 
@@ -47,14 +46,15 @@ const onUploadComplete = async ({
       key: file.key,
       name: file.name,
       userId: metadata.userId,
-      url: `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`,
+      url: file.url,
       uploadStatus: "PROCESSING",
     },
   });
 
   try {
     const response = await fetch(
-      `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`
+      // `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`
+      file.url
     );
 
     const blob = await response.blob();
