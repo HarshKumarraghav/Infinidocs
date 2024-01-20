@@ -1,3 +1,8 @@
+import React from "react";
+
+import { ArrowRight, Check, HelpCircle, Minus } from "lucide-react";
+import Link from "next/link";
+
 import MaxWidthWrapper from "@/components/Container/MaxWidthWrapper";
 import UpgradeButton from "@/components/Payment/UpgradeButton";
 import { buttonVariants } from "@/components/ui/button";
@@ -10,11 +15,6 @@ import {
 import { PLANS } from "@/config/stripe";
 import { cn } from "@/lib/utils";
 import { auth, clerkClient } from "@clerk/nextjs";
-import { ArrowRight, Check, HelpCircle, Minus } from "lucide-react";
-
-import Link from "next/link";
-
-import React from "react";
 
 const page = async () => {
   const { userId } = auth();
@@ -26,7 +26,7 @@ const page = async () => {
       quota: 10,
       features: [
         {
-          text: "5 pages per PDF",
+          text: "25 pages per PDF",
           footnote: "The maximum amount of pages per PDF-file.",
         },
         {
@@ -53,7 +53,7 @@ const page = async () => {
       quota: PLANS.find((p) => p.slug === "pro")!.quota,
       features: [
         {
-          text: "25 pages per PDF",
+          text: "100 pages per PDF",
           footnote: "The maximum amount of pages per PDF-file.",
         },
         {
