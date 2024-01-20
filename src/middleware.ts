@@ -11,7 +11,7 @@ export default authMiddleware({
     "/api/trpc/[trpc]",
     "/api/uploadthing",
     "/api/message",
-    "/api/periodically-chat",
+    "/api/chat",
     "/api/webhook",
     "/api/webhook/stripe",
   ],
