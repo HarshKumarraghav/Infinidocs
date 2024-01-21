@@ -1,16 +1,14 @@
-import { OpenAIStream, StreamingTextResponse } from "ai";
+import { OpenAIStream } from "ai";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { PineconeStore } from "langchain/vectorstores/pinecone";
-import { NextRequest } from "next/server";
 
 import { db } from "@/db";
 import { openai } from "@/lib/openai";
 import { getPineconeClient } from "@/lib/Pinecone";
 import { SendMessageValidator } from "@/lib/Validators/SendMessageValidator";
 
-export const POST = async (req: NextRequest) => {
+export const POST = async (req: Request) => {
   const body = await req.json();
-
   const userId = "user_2W84NAgbyRlQMaMN7c1sq0IV3yr";
 
   const { fileId, message } = SendMessageValidator.parse(body);
@@ -99,5 +97,12 @@ export const POST = async (req: NextRequest) => {
     },
   });
 
-  return new StreamingTextResponse(stream);
+  return new Response(stream, {
+    status: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
 };
