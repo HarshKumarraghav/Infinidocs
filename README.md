@@ -86,12 +86,16 @@ Install node modules and run the project.
 npm install
 or
 yarn install
+or
+pnpm run dev
 ```
 
 ```
 npm run dev
 or
 yarn run dev
+or
+pnpm run dev
 ```
 
 ### Finish
