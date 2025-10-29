@@ -86,7 +86,7 @@ console.log({file})
 
     // vectorize and index entire document
     const pinecone = await getPineconeClient();
-    const pineconeIndex = pinecone.index("infinidocs-app");
+    const pineconeIndex = pinecone.Index("infinidocs-app");
 
     const embeddings = new OpenAIEmbeddings({
       openAIApiKey: process.env.OPENAI_API_KEY,
