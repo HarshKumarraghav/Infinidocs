@@ -79,7 +79,7 @@ const Footer = () => {
       <div className="w-full h-10 flex justify-center items-center bg-primary/10 shadow-light-shadow text-center">
         <p className="text-sm ">
           &copy; 2025 Infinidocs. All Rights Reserved by Infinidocs Software Pvt
-          Ltd
+          Ltd.
         </p>
       </div>
     </>
