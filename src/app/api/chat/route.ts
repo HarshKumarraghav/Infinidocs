@@ -33,7 +33,7 @@ export const POST = async (req: Request) => {
   });
   const pinecone = await getPineconeClient();
   // vectorize the page level docs
-  const PineconeIndex = pinecone.Index("infini");
+  const PineconeIndex = pinecone.index("infinidocs-app");
 
   const vectorstores = await PineconeStore.fromExistingIndex(embeddings, {
     pineconeIndex: PineconeIndex,

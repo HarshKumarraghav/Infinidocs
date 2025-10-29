@@ -33,21 +33,21 @@ const Footer = () => {
             <div className="w-full md:w-1/3">
               <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
               <ul className="text-sm md:text-base leading-relaxed">
-                <li className="flex items-center mb-2  text-sm">
+                {/*<li className="flex items-center mb-2  text-sm">
                   <Phone className="mr-2  text-sm" />
                   +91 7078218794
                 </li>
                 <li className="flex items-center mb-2  text-sm">
                   <Mail className="mr-2  text-sm" />
                   raghavharsh068@gmail.com
-                </li>
+                </li>*/}
                 <li className="flex items-center  text-sm">
                   <LocateFixedIcon className="mr-2  text-sm" />
                   Gautam Buddha Nagar, Uttar Pradesh, India
                 </li>
               </ul>
             </div>
-            <div className="w-full md:w-1/3">
+            {/*<div className="w-full md:w-1/3">
               <h2 className="text-lg font-semibold mb-4">Socials</h2>
               <div className="flex gap-4">
                 <Link
@@ -72,13 +72,13 @@ const Footer = () => {
                   <Linkedin />
                 </Link>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </footer>
       <div className="w-full h-10 flex justify-center items-center bg-primary/10 shadow-light-shadow text-center">
         <p className="text-sm ">
-          &copy; 2023 Infinidocs. All Rights Reserved by Infinidocs Software Pvt
+          &copy; 2025 Infinidocs. All Rights Reserved by Infinidocs Software Pvt
           Ltd
         </p>
       </div>

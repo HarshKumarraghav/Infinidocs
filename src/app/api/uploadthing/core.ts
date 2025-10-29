@@ -50,7 +50,7 @@ const onUploadComplete = async ({
       uploadStatus: "PROCESSING",
     },
   });
-
+console.log({file})
   try {
     const response = await fetch(
       // `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`
@@ -86,7 +86,7 @@ const onUploadComplete = async ({
 
     // vectorize and index entire document
     const pinecone = await getPineconeClient();
-    const pineconeIndex = pinecone.Index("infini");
+    const pineconeIndex = pinecone.index("infinidocs-app");
 
     const embeddings = new OpenAIEmbeddings({
       openAIApiKey: process.env.OPENAI_API_KEY,
@@ -106,6 +106,7 @@ const onUploadComplete = async ({
       },
     });
   } catch (err) {
+    console.log({err})
     await db.file.update({
       data: {
         uploadStatus: "FAILED",
