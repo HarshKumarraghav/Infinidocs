@@ -1,6 +1,6 @@
 import { OpenAIStream } from "ai";
-import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-import { PineconeStore } from "langchain/vectorstores/pinecone";
+import { OpenAIEmbeddings } from "@langchain/openai";
+import { PineconeStore } from "@langchain/pinecone";
 
 import { db } from "@/db";
 import { openai } from "@/lib/openai";
@@ -30,10 +30,12 @@ export const POST = async (req: Request) => {
 
   const embeddings = new OpenAIEmbeddings({
     openAIApiKey: process.env.OPENAI_API_KEY,
+    model: "text-embedding-3-small",
+    dimensions: 1024,
   });
   const pinecone = await getPineconeClient();
   // vectorize the page level docs
-  const PineconeIndex = pinecone.Index("infinidocs-app");
+  const PineconeIndex = pinecone.index("infinidocs-app");
 
   const vectorstores = await PineconeStore.fromExistingIndex(embeddings, {
     pineconeIndex: PineconeIndex,

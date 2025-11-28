@@ -1,6 +1,6 @@
-import { PDFLoader } from "langchain/document_loaders/fs/pdf";
-import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-import { PineconeStore } from "langchain/vectorstores/pinecone";
+import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+import { OpenAIEmbeddings } from "@langchain/openai";
+import { PineconeStore } from "@langchain/pinecone";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 
 import { PLANS } from "@/config/stripe";
@@ -86,10 +86,12 @@ console.log({file})
 
     // vectorize and index entire document
     const pinecone = await getPineconeClient();
-    const pineconeIndex = pinecone.Index("infinidocs-app");
+    const pineconeIndex = pinecone.index("infinidocs-app");
 
     const embeddings = new OpenAIEmbeddings({
       openAIApiKey: process.env.OPENAI_API_KEY,
+      model: "text-embedding-3-small",
+      dimensions: 1024,
     });
 
     await PineconeStore.fromDocuments(pageLevelDocs, embeddings, {
